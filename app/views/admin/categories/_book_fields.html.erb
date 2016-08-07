@@ -1,0 +1,15 @@
+<div class="fields">
+  <p>
+    <%= t "categoy.add_book"%>
+    <%= f.label :title %>
+    <%= f.text_field :title, class: "form-control" %>
+    <%= f.label :author %>
+    <%= f.text_field :author, class: "form-control" %>
+    <%= f.label :number_of_pages %>
+    <%= f.text_field :number_of_pages, class: "form-control" %>
+    <%= f.label :publish_date %>
+    <%= f.date_field :publish_date, class: "form-control" %>
+    <%= f.hidden_field :_destroy, value: 0 %> 
+  </p>
+  <%= link_to_remove_fields "category.remove", f %>
+</div>

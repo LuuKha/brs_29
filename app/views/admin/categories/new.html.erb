@@ -1,0 +1,17 @@
+<% provide :title, t("category.new_calegory") %>
+<h2><%= t "category.create" %></h2>
+<div>
+  <%= form_for [:admin, @category] do |f| %>
+    <%= render "shared/error_messages", object: @category %>
+    <div class="new-calegory">
+      <%= f.text_field :name, class: "form-control category-field" %>
+    </div>
+    <div class="add-book">
+      <%= f.fields_for :books do |book| %>
+        <%= render "book_fields", f: book %>
+      <% end %>
+    </div>
+    <p><%= link_to_add_fields "category.add_book", f, :books %></p>
+    <p><%= f.submit t("button.create"), class: "btn btn-sm btn-success" %></p>
+  <% end %>
+</div>

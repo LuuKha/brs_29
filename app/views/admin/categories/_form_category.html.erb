@@ -1,0 +1,5 @@
+<%= form_for [:admin, @category] do |f| %>
+  <%= render "shared/error_messages", object: @category %>
+  <%= f.text_field :name, class: "form-control category-field" %>
+  <%= f.submit type_action, class: "btn btn-sm btn-success" %>
+<% end %>

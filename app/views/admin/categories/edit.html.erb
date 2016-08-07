@@ -1,0 +1,9 @@
+<% provide :title, t("category.edit") %>
+<h1><%= t "category.edit" %></h1>
+<div class="list-center">
+  <%= form_for [:admin, @category] do |f| %>
+    <%= render "shared/error_messages", object: @category %>
+    <%= f.text_field :name, class: "form-control category-field" %>
+    <%= f.submit t("category.edit"), class: "btn btn-sm btn-success" %>
+  <% end %>  
+</div>

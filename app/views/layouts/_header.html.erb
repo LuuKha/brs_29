@@ -8,6 +8,10 @@
         <% if user_signed_in? %>
           <% if current_user.is_admin? %>
             <li>
+              <%= link_to t("application.manage_category"), 
+                admin_categories_path %>
+            </li>
+            <li>
               <%= link_to t("book.new"), new_admin_book_path %>
             </li> 
             <li>

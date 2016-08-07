@@ -16,6 +16,7 @@ en:
     default-image: "http://pngimg.com/upload/book_PNG2111.png"
     follow: "Follow"
     destroy: "Delete"
+    manage_category: "Categories"
   footer:
     content: "BRB_29 TEAM"
   register:
@@ -59,8 +60,23 @@ en:
     destroy: "User deleted"
     destroy_fail: "Can not delete that user"
     users: "Users"
+  category:
+    create: "Create new category" 
+    edit: "Edit category" 
+    success: "Category has been created."
+    fail: "Category has not been created."
+    update_success: "Category has been updated."
+    update_fail: "Category has not been updated."
+    destroy: "Category has been deleted."
+    destroy_alert: "Category has not been deleted"
+    add_book: "Add book"
+    new_calegory: "New category"
+    remove: "Remove"
   button: 
+    create: "Create"
+    edit: "Edit"
     update: "Update"
+    delete: "Delete"
   quote:
     first: "A book is a dream that you hold in your hand."
   rate: 

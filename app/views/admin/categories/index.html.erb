@@ -1,0 +1,30 @@
+<% provide :title, t("application.manage_category") %>
+<div class="new-category">
+  <h2><%= t "category.create" %></h2>
+  <%= link_to t("button.new"), new_admin_category_path, 
+    class: "btn btn-success category-button" %>
+</div>
+<h1><%= t "application.categories" %></h1>
+<div class="list-center">
+  <div class="categories">
+    <ul class="list-group">
+      <% @categories.each do |category| %>
+        <li id="categoty-<%= category.id %>">
+          <div class="list-group-item category-field">
+            <%= category.name %>
+          </div>
+          <div class="category-delete">
+            <%= link_to t("button.edit"), edit_admin_category_path(category), 
+              class: "btn btn-success category-button" %>
+            <%= link_to t("button.delete"), admin_category_path(category),
+              method: :delete, data: {confirm: t("application.confirm")}, 
+              class: "btn btn-danger category-button" %>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="clear">
+    <%= paginate @categories %>
+  </div>
+</div>
