@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  ratyrate_rater
+  
   devise :database_authenticatable, :registerable, :rememberable, :validatable
 
   has_many :active_relationships, class_name: Relationship.name,
