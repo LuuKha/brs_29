@@ -19,6 +19,7 @@ gem "paperclip", "~> 4.1"
 gem "sdoc", "0.4.0", group: :doc
 gem "ransack", "1.7"
 gem "kaminari"
+gem "ratyrate"
 
 group :development, :test do
   gem "sqlite3"
